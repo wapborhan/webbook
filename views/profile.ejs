@@ -1,29 +1,457 @@
-<%- include header %>
-<div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+<!DOCTYPE html>
+<html lang="en">
 
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h3 class="panel-title"><%=data[0].first_name%>, <%=data[0].last_name%></h3>
-        </div>
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://localhost:8080/me.jpg" class="img-circle img-responsive"> </div>
-            <div class=" col-md-9 col-lg-9 "> 
-              <table class="table table-user-information">
-                <tbody>
-                  <tr>
-                    <td>User Name:</td>
-                    <td><%=data[0].user_name%></td>
-                  </tr>
-                  <tr>
-                    <td>Mobile:</td>
-                    <td><%=data[0].mob_no%></td>
-                  </tr>
-                </tbody>
-              </table>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Profile</title>
+  <!-- Custom fonts for this template-->
+  <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="/css/sb-admin-2.css" rel="stylesheet">
+  <link href="/css/profile.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav id="topbar"
+          class="topbar navbar navbar-expand navbar-light bg-white  mb-4 static-top shadow d-flex justify-content-between">
+
+          <div class="container">
+            <div class="sidebars-button text-dark mr-auto">
+              <!-- <i class="fa fa-bars bx bx-menu sidebarsBtn"></i> -->
+              <span class="dashboard">WebBook</span>
+            </div>
+
+            <!-- Topbar Search -->
+            <form class="d-none d-sm-inline-block form-inline ml-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+              <div class="input-group">
+                <input type="text" class="form-control bg-light border-1 border-primary small"
+                  placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="button">
+                    <i class="fas fa-search fa-sm"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+
+              <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+              <li class="nav-item dropdown no-arrow d-sm-none">
+                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-search fa-fw"></i>
+                </a>
+                <!-- Dropdown - Messages -->
+                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                  aria-labelledby="searchDropdown">
+                  <form class="form-inline mr-auto w-100 navbar-search">
+                    <div class="input-group">
+                      <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                        aria-label="Search" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                          <i class="fas fa-search fa-sm"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </li>
+
+              <!-- Nav Item - Alerts -->
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-bell fa-fw"></i>
+                  <!-- Counter - Alerts -->
+                  <span class="badge badge-danger badge-counter">3+</span>
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                  aria-labelledby="alertsDropdown">
+                  <h6 class="dropdown-header">
+                    Alerts Center
+                  </h6>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-primary">
+                        <i class="fas fa-file-alt text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">December 12, 2019</div>
+                      <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-success">
+                        <i class="fas fa-donate text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">December 7, 2019</div>
+                      $290.29 has been deposited into your account!
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-warning">
+                        <i class="fas fa-exclamation-triangle text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">December 2, 2019</div>
+                      Spending Alert: We've noticed unusually high spending for your account.
+                    </div>
+                  </a>
+                  <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                </div>
+              </li>
+
+              <!-- Nav Item - Messages -->
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-envelope fa-fw"></i>
+                  <!-- Counter - Messages -->
+                  <span class="badge badge-danger badge-counter">7</span>
+                </a>
+                <!-- Dropdown - Messages -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                  aria-labelledby="messagesDropdown">
+                  <h6 class="dropdown-header">
+                    Message Center
+                  </h6>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image mr-3">
+                      <img class="rounded-circle" src="/img/undraw_profile_1.svg" alt="...">
+                      <div class="status-indicator bg-success"></div>
+                    </div>
+                    <div class="font-weight-bold">
+                      <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                        problem I've been having.</div>
+                      <div class="small text-gray-500">Emily Fowler · 58m</div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image mr-3">
+                      <img class="rounded-circle" src="/img/undraw_profile_2.svg" alt="...">
+                      <div class="status-indicator"></div>
+                    </div>
+                    <div>
+                      <div class="text-truncate">I have the photos that you ordered last month, how
+                        would you like them sent to you?</div>
+                      <div class="small text-gray-500">Jae Chun · 1d</div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image mr-3">
+                      <img class="rounded-circle" src="/img/undraw_profile_3.svg" alt="...">
+                      <div class="status-indicator bg-warning"></div>
+                    </div>
+                    <div>
+                      <div class="text-truncate">Last month's report looks great, I am very happy with
+                        the progress so far, keep up the good work!</div>
+                      <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image mr-3">
+                      <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="...">
+                      <div class="status-indicator bg-success"></div>
+                    </div>
+                    <div>
+                      <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                        told me that people say this to all dogs, even if they aren't good...</div>
+                      <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                </div>
+              </li>
+
+              <div class="topbar-divider d-none d-sm-block"></div>
+
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                  <img class="img-profile rounded-circle" src="/img/undraw_profile.svg">
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Settings
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Activity Log
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+
+        <div class="container-fluid topbarpt">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="card profile-cover">
+                  <img src="https://www.w3schools.com/w3images/lights.jpg" class="card-img-top" alt="...">
+                  <div class="card-left-img text-center rounded-circle  ">
+                    <img src="/img/logo.png" class="card-img-top" alt="Profile">
+                  </div>
+                  <div class="card-body text-center profile-name">
+                    <h5 class="card-title mb-3"><%=data[0].first_name%> <%=data[0].last_name%>
+                      <span class="d-block m-2"><%=data[0].user_name%></span></h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <!-- Content Left Bar Start -->
+              <div class="col-lg-4  mt-3">
+                <div class="card">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <i class="bi bi-briefcase-fill mr-2"></i>
+                      Works :
+                      <span class="ml-3">CodesTrickZ</span>
+                    </li>
+                    <li class="list-group-item">
+                      <i class="fa fa-graduation-cap mr-2"></i>
+                      Education :
+                      <span class="ml-3">SSC</span>
+                    </li>
+                    <li class="list-group-item">
+                      <i class="bi bi-house-fill mr-2"></i>
+                      Address :
+                      <span class="ml-3">Bheramara</span>
+                    </li>
+                    <li class="list-group-item">
+                      <i class="fa fa-user-alt mr-2"></i>
+                      Gender :
+                      <span class="ml-3">Male</span>
+                    </li>
+                    <li class="list-group-item">
+                      <i class="fa fa-phone-alt mr-2"></i>
+                      Number :
+                      <span class="ml-3"><%=data[0].mob_no%></span>
+                    </li>
+                    <li class="list-group-item">
+                      <i class="fa fa-envelope mr-2"></i>
+                      Email :
+                      <span class="ml-3">test@gmail.com</span>
+                    </li>
+                  </ul>
+                  <div class="card-body">
+                    <button href="#" class="card-link btn-primary btn">Card link</button>
+                    <button href="#" class="card-link btn btn-danger">Another link</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Content Left Bar End -->
+
+              <!-- Content Center Bar Start -->
+              <div class="col-lg-8 mt-3">
+                <!-- Whats On Your Mind -->
+                <div class="card">
+                  <div class="card-header">
+                    What's on your mind?
+                  </div>
+                  <div class="card-body">
+                    <form action="" method="post">
+                      <div class="mb-3">
+                        <textarea class="form-control" id="status" rows="3"></textarea>
+                      </div>
+                      <div class="sts-btn">
+                        <button type="submit" class="btn btn-primary float-right"><i
+                            class="fa fa-pen mr-2"></i>Post</button>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+                <!-- Whats On Your Mind -->
+
+                <!-- User Posts Start -->
+                <div class="card mt-4">
+                  <div class="card-header d-flex post-user">
+                    <img src="/img/undraw_profile.svg" alt="User">
+                    <h4 class="ml-3 text-primary">Borhan Uddin
+                      <span class="d-block text-dark">12 sep 2021</span>
+                    </h4>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  </div>
+                  <div class="card-footer text-muted d-flex justify-content-between">
+                    <div class="left">
+                      <div class="btn"><i class="fa fa-thumbs-up mr-1"></i>Like</div>
+                      <div class="btn"><i class="fa fa-comment mr-1"></i>Comment</div>
+                    </div>
+                    <div class="right">
+                      <div class="btn"><i class="fa fa-share mr-1"></i>Share</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- User Post End -->
+
+                <!-- User Posts Start -->
+                <div class="card mt-4">
+                  <div class="card-header d-flex post-user">
+                    <img src="/img/undraw_profile.svg" alt="User">
+                    <h4 class="ml-3 text-primary">Borhan Uddin
+                      <span class="d-block text-dark">12 sep 2021</span>
+                    </h4>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  </div>
+                  <div class="card-footer text-muted d-flex justify-content-between">
+                    <div class="left">
+                      <div class="btn"><i class="fa fa-thumbs-up mr-1"></i>Like</div>
+                      <div class="btn"><i class="fa fa-comment mr-1"></i>Comment</div>
+                    </div>
+                    <div class="right">
+                      <div class="btn"><i class="fa fa-share mr-1"></i>Share</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- User Post End -->
+
+
+                <!-- User Posts Start -->
+                <div class="card mt-4">
+                  <div class="card-header d-flex post-user">
+                    <img src="/img/undraw_profile.svg" alt="User">
+                    <h4 class="ml-3 text-primary">Borhan Uddin
+                      <span class="d-block text-dark">12 sep 2021</span>
+                    </h4>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  </div>
+                  <div class="card-footer text-muted d-flex justify-content-between">
+                    <div class="left">
+                      <div class="btn"><i class="fa fa-thumbs-up mr-1"></i>Like</div>
+                      <div class="btn"><i class="fa fa-comment mr-1"></i>Comment</div>
+                    </div>
+                    <div class="right">
+                      <div class="btn"><i class="fa fa-share mr-1"></i>Share</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- User Post End -->
+              </div>
+              <!-- Content Center Bar End -->
+
             </div>
           </div>
         </div>
+
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-dark text-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2021</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
     </div>
- <%- include footer %>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded bg-warning" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="/js/sb-admin-2.min.js"></script>
+
+</body>

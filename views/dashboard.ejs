@@ -1,233 +1,572 @@
-<%- include header %>
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Page Container -->
-<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
-	<!-- The Grid -->
-	<div class="w3-row">
-		<!-- Left Column -->
-		<div class="w3-col m3">
-			<!-- Profile -->
-			<div class="w3-card w3-round w3-white">
-				<div class="w3-container">
-					<h4 class="w3-center">My Profile</h4>
-					<p class="w3-center"><img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle"
-							style="height:106px;width:106px" alt="Avatar"></p>
-					<hr>
-					<p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
-					<p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>
-					<p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 1988</p>
-				</div>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Dashboard</title>
+	<!-- Custom fonts for this template-->
+	<link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link
+		href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+		rel="stylesheet">
+	<!-- Custom styles for this template-->
+	<link href="/css/sb-admin-2.css" rel="stylesheet">
+	<link href="/css/dashboard.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+	<!-- Page Wrapper -->
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div class="sidebars bg-white shadow ">
+			<div class="logo-details">
+				<!-- <i class='bx bxl-c-plus-plus'></i> -->
+				<img src="/img/logo.png" alt="L">
+				<span class="logo_name text-dark">WebBook</span>
 			</div>
-			<br>
+			<ul class="nav-links">
+				<li>
+					<a href="#" class="active">
+						<i class="fas fa-user text-dark"></i>
+						<span class="links_name">Profile</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fas fa-user-plus text-dark"></i>
+						<span class="links_name">Friends</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fas fa-users text-dark"></i>
+						<span class="links_name">Groups</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fas fa-flag text-dark"></i>
+						<span class="links_name">Pages</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fas fa-briefcase text-dark"></i>
+						<span class="links_name">Job</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fas fa-graduation-cap text-dark"></i>
+						<span class="links_name">Education</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fas fa-bullhorn text-dark"></i>
+						<span class="links_name">Advertise</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fas fa-store text-dark"></i>
+						<span class="links_name">Marcketplace</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fas fa-cloud-sun text-dark"></i>
+						<span class="links_name">Weather</span>
+					</a>
+				</li>
+				<li class="log_out">
+					<a href="#">
+						<i class="fas fa-cog text-dark"></i>
+						<span class="links_name">Settings</span>
+					</a>
+				</li>
+			</ul>
 
-			<!-- Accordion -->
-			<div class="w3-card w3-round">
-				<div class="w3-white">
-					<button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
-							class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Groups</button>
-					<div id="Demo1" class="w3-hide w3-container">
-						<p>Some text..</p>
-					</div>
-					<button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
-							class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Events</button>
-					<div id="Demo2" class="w3-hide w3-container">
-						<p>Some other text..</p>
-					</div>
-					<button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i
-							class="fa fa-users fa-fw w3-margin-right"></i> My Photos</button>
-					<div id="Demo3" class="w3-hide w3-container">
-						<div class="w3-row-padding">
-							<br>
-							<div class="w3-half">
-								<img src="https://www.w3schools.com/w3images/lights.jpg" style="width:100%"
-									class="w3-margin-bottom">
-							</div>
-							<div class="w3-half">
-								<img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%"
-									class="w3-margin-bottom">
-							</div>
-							<div class="w3-half">
-								<img src="https://www.w3schools.com/w3images/mountains.jpg" style="width:100%"
-									class="w3-margin-bottom">
-							</div>
-							<div class="w3-half">
-								<img src="https://www.w3schools.com/w3images/forest.jpg" style="width:100%"
-									class="w3-margin-bottom">
-							</div>
-							<div class="w3-half">
-								<img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%"
-									class="w3-margin-bottom">
-							</div>
-							<div class="w3-half">
-								<img src="https://www.w3schools.com/w3images/snow.jpg" style="width:100%"
-									class="w3-margin-bottom">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<br>
-
-			<!-- Interests -->
-			<div class="w3-card w3-round w3-white w3-hide-small">
-				<div class="w3-container">
-					<p>Interests</p>
-					<p>
-						<span class="w3-tag w3-small w3-theme-d5">News</span>
-						<span class="w3-tag w3-small w3-theme-d4">W3Schools</span>
-						<span class="w3-tag w3-small w3-theme-d3">Labels</span>
-						<span class="w3-tag w3-small w3-theme-d2">Games</span>
-						<span class="w3-tag w3-small w3-theme-d1">Friends</span>
-						<span class="w3-tag w3-small w3-theme">Games</span>
-						<span class="w3-tag w3-small w3-theme-l1">Friends</span>
-						<span class="w3-tag w3-small w3-theme-l2">Food</span>
-						<span class="w3-tag w3-small w3-theme-l3">Design</span>
-						<span class="w3-tag w3-small w3-theme-l4">Art</span>
-						<span class="w3-tag w3-small w3-theme-l5">Photos</span>
-					</p>
-				</div>
-			</div>
-			<br>
-
-			<!-- Alert Box -->
-			<div
-				class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
-				<span onclick="this.parentElement.style.display='none'"
-					class="w3-button w3-theme-l3 w3-display-topright">
-					<i class="fa fa-remove"></i>
-				</span>
-				<p><strong>Hey!</strong></p>
-				<p>People are looking at your profile. Find out who.</p>
-			</div>
-
-			<!-- End Left Column -->
 		</div>
+		<!-- End of Sidebar -->
 
-		<!-- Middle Column -->
-		<div class="w3-col m7">
+		<!-- Content Wrapper -->
+		<div id="content-wrapper" class="d-flex flex-column">
 
-			<div class="w3-row-padding">
-				<div class="w3-col m12">
-					<div class="w3-card w3-round w3-white">
-						<div class="w3-container w3-padding">
-							<h6 class="w3-opacity">Social Media template by w3.css</h6>
-							<p contenteditable="true" class="w3-border w3-padding">Status: Feeling Blue</p>
-							<button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>
-								 Post</button>
+			<!-- Main Content -->
+			<div id="content">
+
+				<!-- Topbar -->
+				<nav id="topbar"
+					class="topbar navbar navbar-expand navbar-light bg-white  mb-4 static-top shadow d-flex justify-content-between">
+
+					<div class="sidebars-button text-dark mr-auto">
+						<i class="fa fa-bars bx bx-menu sidebarsBtn"></i>
+						<span class="dashboard">WebBook</span>
+					</div>
+
+					<!-- Topbar Search -->
+					<form class="d-none d-sm-inline-block form-inline ml-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+						<div class="input-group">
+							<input type="text" class="form-control bg-light border-1 border-primary small" placeholder="Search for..."
+								aria-label="Search" aria-describedby="basic-addon2">
+							<div class="input-group-append">
+								<button class="btn btn-primary" type="button">
+									<i class="fas fa-search fa-sm"></i>
+								</button>
+							</div>
 						</div>
+					</form>
+
+
+					<!-- Topbar Navbar -->
+					<ul class="navbar-nav ml-auto">
+
+						<!-- Nav Item - Search Dropdown (Visible Only XS) -->
+						<li class="nav-item dropdown no-arrow d-sm-none">
+							<a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-search fa-fw"></i>
+							</a>
+							<!-- Dropdown - Messages -->
+							<div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+								aria-labelledby="searchDropdown">
+								<form class="form-inline mr-auto w-100 navbar-search">
+									<div class="input-group">
+										<input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+											aria-label="Search" aria-describedby="basic-addon2">
+										<div class="input-group-append">
+											<button class="btn btn-primary" type="button">
+												<i class="fas fa-search fa-sm"></i>
+											</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</li>
+
+						<!-- Nav Item - Alerts -->
+						<li class="nav-item dropdown no-arrow mx-1">
+							<a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-bell fa-fw"></i>
+								<!-- Counter - Alerts -->
+								<span class="badge badge-danger badge-counter">3+</span>
+							</a>
+							<!-- Dropdown - Alerts -->
+							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								aria-labelledby="alertsDropdown">
+								<h6 class="dropdown-header">
+									Alerts Center
+								</h6>
+								<a class="dropdown-item d-flex align-items-center" href="#">
+									<div class="mr-3">
+										<div class="icon-circle bg-primary">
+											<i class="fas fa-file-alt text-white"></i>
+										</div>
+									</div>
+									<div>
+										<div class="small text-gray-500">December 12, 2019</div>
+										<span class="font-weight-bold">A new monthly report is ready to download!</span>
+									</div>
+								</a>
+								<a class="dropdown-item d-flex align-items-center" href="#">
+									<div class="mr-3">
+										<div class="icon-circle bg-success">
+											<i class="fas fa-donate text-white"></i>
+										</div>
+									</div>
+									<div>
+										<div class="small text-gray-500">December 7, 2019</div>
+										$290.29 has been deposited into your account!
+									</div>
+								</a>
+								<a class="dropdown-item d-flex align-items-center" href="#">
+									<div class="mr-3">
+										<div class="icon-circle bg-warning">
+											<i class="fas fa-exclamation-triangle text-white"></i>
+										</div>
+									</div>
+									<div>
+										<div class="small text-gray-500">December 2, 2019</div>
+										Spending Alert: We've noticed unusually high spending for your account.
+									</div>
+								</a>
+								<a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+							</div>
+						</li>
+
+						<!-- Nav Item - Messages -->
+						<li class="nav-item dropdown no-arrow mx-1">
+							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-envelope fa-fw"></i>
+								<!-- Counter - Messages -->
+								<span class="badge badge-danger badge-counter">7</span>
+							</a>
+							<!-- Dropdown - Messages -->
+							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								aria-labelledby="messagesDropdown">
+								<h6 class="dropdown-header">
+									Message Center
+								</h6>
+								<a class="dropdown-item d-flex align-items-center" href="#">
+									<div class="dropdown-list-image mr-3">
+										<img class="rounded-circle" src="/img/undraw_profile_1.svg" alt="...">
+										<div class="status-indicator bg-success"></div>
+									</div>
+									<div class="font-weight-bold">
+										<div class="text-truncate">Hi there! I am wondering if you can help me with a
+											problem I've been having.</div>
+										<div class="small text-gray-500">Emily Fowler · 58m</div>
+									</div>
+								</a>
+								<a class="dropdown-item d-flex align-items-center" href="#">
+									<div class="dropdown-list-image mr-3">
+										<img class="rounded-circle" src="/img/undraw_profile_2.svg" alt="...">
+										<div class="status-indicator"></div>
+									</div>
+									<div>
+										<div class="text-truncate">I have the photos that you ordered last month, how
+											would you like them sent to you?</div>
+										<div class="small text-gray-500">Jae Chun · 1d</div>
+									</div>
+								</a>
+								<a class="dropdown-item d-flex align-items-center" href="#">
+									<div class="dropdown-list-image mr-3">
+										<img class="rounded-circle" src="/img/undraw_profile_3.svg" alt="...">
+										<div class="status-indicator bg-warning"></div>
+									</div>
+									<div>
+										<div class="text-truncate">Last month's report looks great, I am very happy with
+											the progress so far, keep up the good work!</div>
+										<div class="small text-gray-500">Morgan Alvarez · 2d</div>
+									</div>
+								</a>
+								<a class="dropdown-item d-flex align-items-center" href="#">
+									<div class="dropdown-list-image mr-3">
+										<img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="...">
+										<div class="status-indicator bg-success"></div>
+									</div>
+									<div>
+										<div class="text-truncate">Am I a good boy? The reason I ask is because someone
+											told me that people say this to all dogs, even if they aren't good...</div>
+										<div class="small text-gray-500">Chicken the Dog · 2w</div>
+									</div>
+								</a>
+								<a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+							</div>
+						</li>
+
+						<div class="topbar-divider d-none d-sm-block"></div>
+
+						<!-- Nav Item - User Information -->
+						<li class="nav-item dropdown no-arrow">
+							<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+								<span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+								<img class="img-profile rounded-circle" src="/img/undraw_profile.svg">
+							</a>
+							<!-- Dropdown - User Information -->
+							<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+								<a class="dropdown-item" href="#">
+									<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+									Profile
+								</a>
+								<a class="dropdown-item" href="#">
+									<i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+									Settings
+								</a>
+								<a class="dropdown-item" href="#">
+									<i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+									Activity Log
+								</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+									Logout
+								</a>
+							</div>
+						</li>
+
+					</ul>
+
+				</nav>
+				<!-- End of Topbar -->
+
+				<!-- Begin Page Content -->
+				<div class="container-fluid topbarpt">
+
+					<div class="row">
+
+						<!-- Content Center Bar Start -->
+						<div class="col-lg-8 mt-3">
+							<!-- Whats On Your Mind -->
+							<div class="card">
+								<div class="card-header">
+									What's on your mind?
+								</div>
+								<div class="card-body">
+									<form action="" method="post">
+										<div class="mb-3">
+											<textarea class="form-control" id="status" rows="3"></textarea>
+										</div>
+										<div class="sts-btn">
+											<button type="submit" class="btn btn-primary float-right"><i
+													class="fa fa-pen mr-2"></i>Post</button>
+										</div>
+
+									</form>
+								</div>
+							</div>
+							<!-- Whats On Your Mind -->
+
+							<!-- User Posts Start -->
+							<div class="card mt-4">
+								<div class="card-header d-flex justify-content-between post-user">
+									<div class="dis d-flex">
+										<img src="/img/undraw_profile.svg" alt="User">
+										<h4 class="ml-3 text-primary">Borhan Uddin
+											<span class="d-block text-dark">12 sep 2021</span>
+										</h4>
+									</div>
+									<div class="set align-self-center">
+										<a href=""><i class="fas fa-ellipsis-v"></i></a>
+									</div>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">Special title treatment</h5>
+									<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+								</div>
+								<div class="card-footer text-muted d-flex justify-content-between">
+									<div class="left">
+										<div class="btn"><i class="fa fa-thumbs-up mr-1"></i>Like</div>
+										<div class="btn"><i class="fa fa-comment mr-1"></i>Comment</div>
+									</div>
+									<div class="right">
+										<div class="btn"><i class="fa fa-share mr-1"></i>Share</div>
+									</div>
+								</div>
+							</div>
+							<!-- User Post End -->
+
+							<!-- User Posts Start -->
+							<div class="card mt-4">
+								<div class="card-header d-flex justify-content-between post-user">
+									<div class="dis d-flex">
+										<img src="/img/undraw_profile.svg" alt="User">
+										<h4 class="ml-3 text-primary">Borhan Uddin
+											<span class="d-block text-dark">12 sep 2021</span>
+										</h4>
+									</div>
+									<div class="set align-self-center">
+										<a href=""><i class="fas fa-ellipsis-v"></i></a>
+									</div>
+								</div>
+								<div class="card-body post-body">
+									<img
+										src="https://w0.peakpx.com/wallpaper/751/110/HD-wallpaper-flowers-flower-california-hill-yellow-flower.jpg"
+										alt="">
+								</div>
+								<div class="card-footer text-muted d-flex justify-content-between">
+									<div class="left">
+										<div class="btn"><i class="fa fa-thumbs-up mr-1"></i>Like</div>
+										<div class="btn"><i class="fa fa-comment mr-1"></i>Comment</div>
+									</div>
+									<div class="right">
+										<div class="btn"><i class="fa fa-share mr-1"></i>Share</div>
+									</div>
+								</div>
+							</div>
+							<!-- User Post End -->
+
+
+							<!-- User Posts Start -->
+							<div class="card mt-4">
+								<div class="card-header d-flex justify-content-between post-user">
+									<div class="dis d-flex">
+										<img src="/img/undraw_profile.svg" alt="User">
+										<h4 class="ml-3 text-primary">Borhan Uddin
+											<span class="d-block text-dark">12 sep 2021</span>
+										</h4>
+									</div>
+									<div class="set align-self-center">
+										<a href=""><i class="fas fa-ellipsis-v"></i></a>
+									</div>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">Special title treatment</h5>
+									<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+								</div>
+								<div class="card-footer text-muted d-flex justify-content-between">
+									<div class="left">
+										<div class="btn"><i class="fa fa-thumbs-up mr-1"></i>Like</div>
+										<div class="btn"><i class="fa fa-comment mr-1"></i>Comment</div>
+									</div>
+									<div class="right">
+										<div class="btn"><i class="fa fa-share mr-1"></i>Share</div>
+									</div>
+								</div>
+							</div>
+							<!-- User Post End -->
+						</div>
+						<!-- Content Center Bar End -->
+
+						<!-- Content Right Bar Start -->
+						<div class="col-lg-4  mt-3">
+
+							<!-- Online User Start-->
+							<div class="card">
+								<div class="card-header">
+									Online
+								</div>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item d-flex post-user">
+										<img src="/img/undraw_profile.svg" alt="User">
+										<h4 class="ml-3 text-primary">Jhon Smith</h4>
+									</li>
+									<li class="list-group-item d-flex post-user">
+										<img src="/img/undraw_profile_1.svg" alt="User">
+										<h4 class="ml-3 text-primary">Mickel</h4>
+									</li>
+									<li class="list-group-item d-flex post-user">
+										<img src="/img/undraw_profile_2.svg" alt="User">
+										<h4 class="ml-3 text-primary">Decosta</h4>
+									</li>
+								</ul>
+							</div>
+							<!-- Online User End -->
+
+							<!-- Group conversations Start-->
+							<div class="card mt-3">
+								<div class="card-header">
+									Group conversations
+								</div>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item d-flex post-user">
+										<img src="/img/undraw_profile.svg" alt="User">
+										<h4 class="ml-3 text-primary">Musti Unlimited</h4>
+									</li>
+									<li class="list-group-item d-flex post-user">
+										<img src="/img/undraw_profile.svg" alt="User">
+										<h4 class="ml-3 text-primary">Addabazz</h4>
+									</li>
+									<li class="list-group-item d-flex post-user">
+										<img src="/img/undraw_profile.svg" alt="User">
+										<h4 class="ml-3 text-primary">SCC Batch 2012</h4>
+									</li>
+								</ul>
+							</div>
+							<!-- Group conversations End -->
+
+
+							<!-- Pages Start-->
+							<div class="card mt-3">
+								<div class="card-header">
+									Pages
+								</div>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item d-flex post-pages">
+										<img src="/img/undraw_profile.svg" alt="User">
+										<h4 class="ml-3 text-primary">Cyber71 Hack to Protect Bangladesh</h4>
+									</li>
+									<li class="list-group-item d-flex post-pages">
+										<img src="/img/undraw_profile.svg" alt="User">
+										<h4 class="ml-3 text-primary">W3codevs</h4>
+									</li>
+									<li class="list-group-item d-flex post-pages">
+										<img src="/img/undraw_profile.svg" alt="User">
+										<h4 class="ml-3 text-primary">Evergreen Bangladesh</h4>
+									</li>
+								</ul>
+							</div>
+							<!-- Pages End -->
+
+
+						</div>
+						<!-- Content Right Bar End -->
+
+
+					</div>
+
+				</div>
+				<!-- /.container-fluid -->
+
+			</div>
+			<!-- End of Main Content -->
+
+			<!-- Footer -->
+			<footer class="sticky-footer bg-white">
+				<div class="container my-auto">
+					<div class="copyright text-center my-auto">
+						<span>Copyright &copy; Your Website 2021</span>
 					</div>
 				</div>
-			</div>
+			</footer>
+			<!-- End of Footer -->
 
-			<div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-				<img src="https://www.w3schools.com/w3images/avatar2.png" alt="Avatar"
-					class="w3-left w3-circle w3-margin-right" style="width:60px">
-				<span class="w3-right w3-opacity">1 min</span>
-				<h4>John Doe</h4><br>
-				<hr class="w3-clear">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-					labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-					laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<div class="w3-row-padding" style="margin:0 -16px">
-					<div class="w3-half">
-						<img src="https://www.w3schools.com/w3images/lights.jpg" style="width:100%"
-							alt="Northern Lights" class="w3-margin-bottom">
-					</div>
-					<div class="w3-half">
-						<img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" alt="Nature"
-							class="w3-margin-bottom">
-					</div>
-				</div>
-				<button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
-					 Like</button>
-				<button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>
-					 Comment</button>
-			</div>
-
-			<div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-				<img src="https://www.w3schools.com/w3images/avatar5.png" alt="Avatar"
-					class="w3-left w3-circle w3-margin-right" style="width:60px">
-				<span class="w3-right w3-opacity">16 min</span>
-				<h4>Jane Doe</h4><br>
-				<hr class="w3-clear">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-					labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-					laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
-					 Like</button>
-				<button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>
-					 Comment</button>
-			</div>
-
-			<div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-				<img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar"
-					class="w3-left w3-circle w3-margin-right" style="width:60px">
-				<span class="w3-right w3-opacity">32 min</span>
-				<h4>Angie Jane</h4><br>
-				<hr class="w3-clear">
-				<p>Have you seen this?</p>
-				<img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-					labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-					laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
-					 Like</button>
-				<button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>
-					 Comment</button>
-			</div>
-
-			<!-- End Middle Column -->
 		</div>
+		<!-- End of Content Wrapper -->
 
-		<!-- Right Column -->
-		<div class="w3-col m2">
-			<div class="w3-card w3-round w3-white w3-center">
-				<div class="w3-container">
-					<p>Upcoming Events:</p>
-					<img src="https://www.w3schools.com/w3images/forest.jpg" alt="Forest" style="width:100%;">
-					<p><strong>Holiday</strong></p>
-					<p>Friday 15:00</p>
-					<p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
+	</div>
+	<!-- End of Page Wrapper -->
+
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top">
+		<i class="fas fa-angle-up"></i>
+	</a>
+
+	<!-- Logout Modal-->
+	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+					<a class="btn btn-primary" href="login.html">Logout</a>
 				</div>
 			</div>
-			<br>
-
-			<div class="w3-card w3-round w3-white w3-center">
-				<div class="w3-container">
-					<p>Friend Request</p>
-					<img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" style="width:50%"><br>
-					<span>Jane Doe</span>
-					<div class="w3-row w3-opacity">
-						<div class="w3-half">
-							<button class="w3-button w3-block w3-green w3-section" title="Accept"><i
-									class="fa fa-check"></i></button>
-						</div>
-						<div class="w3-half">
-							<button class="w3-button w3-block w3-red w3-section" title="Decline"><i
-									class="fa fa-remove"></i></button>
-						</div>
-					</div>
-				</div>
-			</div>
-			<br>
-
-			<div class="w3-card w3-round w3-white w3-padding-16 w3-center">
-				<p>ADS</p>
-			</div>
-			<br>
-
-			<div class="w3-card w3-round w3-white w3-padding-32 w3-center">
-				<p><i class="fa fa-bug w3-xxlarge"></i></p>
-			</div>
-
-			<!-- End Right Column -->
 		</div>
-
-		<!-- End Grid -->
 	</div>
 
-	<!-- End Page Container -->
-</div>
-<br>
+	<script>
+		let sidebars = document.querySelector(".sidebars");
+		let sidebarsBtn = document.querySelector(".sidebarsBtn");
+		let dashboard = document.querySelector(".dashboard");
+		sidebarsBtn.onclick = function () {
+			sidebars.classList.toggle("active");
+			if (sidebars.classList.contains("active")) {
+				sidebarsBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+				dashboard.classList.replace("dashboard", "dashboard-show");
+			} else {
+				dashboard.classList.replace("dashboard-show", "dashboard");
+				sidebarsBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+			}
+		};
+	</script>
 
-<%- include footer %>
+	<!-- Bootstrap core JavaScript-->
+	<script src="/vendor/jquery/jquery.min.js"></script>
+	<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Core plugin JavaScript-->
+	<script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Custom scripts for all pages-->
+	<script src="/js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>

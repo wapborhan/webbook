@@ -1,0 +1,48 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+#wrapper #content-wrapper {
+  position: relative;
+  width: calc(100% - 0px); 
+   left: 0;
+  background-color: #f8f9fc;
+  transition: all 0.5s ease;
+}
+
+.topbar {
+  height: 4.375rem;
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  z-index: 999;
+  transition: all 0.5s ease;
+}
+
+.profile-cover img{
+  height: 220px;
+}
+.profile-cover{
+  position: relative;
+}
+.dashboard {
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+.card-left-img img {
+  height: 150px;
+  width: 150px;
+}
+
+.card-left-img {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.post-user img{
+  height: 60px;
+  width: 60px;
+}
+.profile-name{
+  padding-top: 90px;
+}
